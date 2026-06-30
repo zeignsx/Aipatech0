@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="flameGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="50" cy="50" r="48" fill="url(#grad)" stroke="#06b6d4" stroke-width="2"/>
+  
+  <!-- Flame Icon -->
+  <g transform="translate(50, 52) scale(0.7)">
+    <path d="M0,-35 C-15,-20 -25,-5 -22,10 C-19,25 -10,30 0,35 C10,30 19,25 22,10 C25,-5 15,-20 0,-35Z" 
+          fill="url(#flameGrad)" 
+          stroke="#fbbf24" 
+          stroke-width="1"/>
+    
+    <!-- Inner flame highlight -->
+    <path d="M0,-25 C-8,-15 -14,-5 -12,5 C-10,15 -5,20 0,22 C5,20 10,15 12,5 C14,-5 8,-15 0,-25Z" 
+          fill="#fcd34d" 
+          opacity="0.6"/>
+    
+    <!-- Small flame flicker -->
+    <ellipse cx="-5" cy="15" rx="3" ry="6" fill="#fbbf24" opacity="0.4" transform="rotate(-15,-5,15)"/>
+    <ellipse cx="5" cy="12" rx="2" ry="4" fill="#fbbf24" opacity="0.3" transform="rotate(15,5,12)"/>
+  </g>
+  
+  <!-- Energy ring -->
+  <circle cx="50" cy="50" r="42" fill="none" stroke="#06b6d4" stroke-width="1" opacity="0.3"/>
+  <circle cx="50" cy="50" r="35" fill="none" stroke="#3b82f6" stroke-width="0.5" opacity="0.2"/>
+  
+  <!-- Sparkle dots -->
+  <circle cx="20" cy="25" r="2" fill="#fcd34d" opacity="0.6"/>
+  <circle cx="80" cy="25" r="1.5" fill="#fcd34d" opacity="0.4"/>
+  <circle cx="25" cy="80" r="1.5" fill="#fcd34d" opacity="0.5"/>
+  <circle cx="78" cy="75" r="2" fill="#fcd34d" opacity="0.3"/>
+</svg>
